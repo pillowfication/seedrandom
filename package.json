@@ -1,6 +1,6 @@
 {
   "name": "pf-seedrandom",
-  "version": "2.4.4",
+  "version": "2.4.4-1",
   "description": "Seeded random number generator for Javascript.",
   "author": {
     "name": "Markus Tran",
