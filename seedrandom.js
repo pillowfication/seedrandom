@@ -94,18 +94,20 @@ function seedrandom(seed, options, callback) {
 
         // If called as a method of Math (Math.seedrandom()), mutate
         // Math.random because that is how seedrandom.js has worked since v1.0.
-        if (is_math_call) { math[rngname] = prng; return seed; }
+        /* if (is_math_call) { math[rngname] = prng; return seed; } */
 
         // Otherwise, it is a newer calling convention, so return the
         // prng directly.
-        else return prng;
+        /* else return prng; */
+        prng.seed = seed
+        return prng
       })(
   prng,
   shortseed,
   'global' in options ? options.global : (this == math),
   options.state);
 }
-math['seed' + rngname] = seedrandom;
+/* math['seed' + rngname] = seedrandom; */
 
 //
 // ARC4
